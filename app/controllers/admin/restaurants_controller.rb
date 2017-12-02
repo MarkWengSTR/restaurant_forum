@@ -1,6 +1,6 @@
 class Admin::RestaurantsController < ApplicationController
 
-  before_action :set_restaurant, only: [:show, :edit, :update]
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all
@@ -32,6 +32,11 @@ class Admin::RestaurantsController < ApplicationController
       render :edit
       flash[:alert] = "restaurant was failed to update"
     end
+  end
+  def destroy
+    @restaurant.destroy
+    redirect_to admin_restaurants_path
+    flash[:notice] = "restaurant was delete"
   end
 end
 
