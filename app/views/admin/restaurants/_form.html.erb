@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="row">
 <% if @restaurant.errors.any? %>
   <h2>We have some errors here !</h2>
   <ul>
@@ -6,25 +8,55 @@
     <% end %>
   </ul>
 <%end%>
-<%= form_for [:admin, @restaurant] do |f|%>
-  <%= f.label :name, "Name" %>
-  <%= f.text_field :name %>
+<div class="form container">
+  <%= form_for [:admin, @restaurant] do |f|%>
+  <div class="form-group">
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+  </div>
 
-  <%= f.label :tel, "Tel" %>
-  <%= f.text_field :tel %>
+  <div class="form-group">
+    <%= f.label :tel, "Tel" %>
+    <%= f.text_field :tel %>
+  </div>
 
-  <%= f.label :address, "Address" %>
-  <%= f.text_field :address %>
+  <div class="form-group">
+    <%= f.label :address, "Address" %>
+    <%= f.text_field :address %>
+  </div>
 
-  <%= f.label :opening_hours, "Opening_hours" %>
-  <%= f.text_field :opening_hours %>
+  <div class="form-group">
+    <%= f.label :opening_hours, "Opening_hours" %>
+    <%= f.text_field :opening_hours %>
+  </div>
 
-  <%= f.label :decription, "Decription" %>
-  <%= f.text_field :decription %>
-
-  <%= f.label :image, "Photo" %>
-  <%= image_tag @restaurant.image, width: '300px' if @restaurant.image? %>
-  <%= f.file_field :image %>
-
-  <%= f.submit %>
+  <div class="form-group">
+    <%= f.label :decription, "Decription" %>
+    <%= f.text_field :decription %>    
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :image, "Photo" %>
+    <%= image_tag @restaurant.image, width: '300px' if @restaurant.image? %>
+    <%= f.file_field :image %>
+  </div>
+  <%= f.submit :class => 'btn btn-primary'%>
 <% end %>
+
+</div>    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
