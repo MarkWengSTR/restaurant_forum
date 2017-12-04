@@ -7,7 +7,8 @@ namespace :dev do
         opening_hours: FFaker::Time.datetime,
         tel: FFaker::PhoneNumber.short_phone_number,
         address: FFaker::Address.street_address,
-        decription: FFaker::Lorem.paragraph
+        decription: FFaker::Lorem.paragraph,
+        category: Category.all.sample
        )
     end
       puts "假資料已建立完成"
