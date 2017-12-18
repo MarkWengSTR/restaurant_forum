@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   end
 
 
+  resources :restaurants, only:[:index, :show] do
+    resources :comments, only:[:create, :destroy]
+  end  
+
 end
