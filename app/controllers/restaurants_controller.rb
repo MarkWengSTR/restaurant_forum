@@ -9,7 +9,5 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @comment = Comment.new
   end
-  def create
-    @restaurant = Restaurant.find(params[:restaurant_id])
-  end
+
 end
