@@ -4,6 +4,7 @@ namespace :dev do
       User.create!(
         email: FFaker::Internet.email ,
         password: FFaker::PhoneNumberCH.home_work_phone_number
+        name: FFaker::Name.name 
       )
     end
       puts "假資料已建立完成"
