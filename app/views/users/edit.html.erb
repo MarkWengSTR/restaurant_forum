@@ -20,7 +20,7 @@
     <%= f.file_field :avatar %>
   </div>
   <%= f.submit "Update" ,:class => 'btn btn-primary'%>
-  <%= link_to 'Cancel', user_path(current_user), :class => 'btn btn-default'%>
+  <%= link_to 'Cancel', user_path(@user), :class => 'btn btn-default'%>
 <% end %>
 
 </div>    
