@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates_presence_of :name
   mount_uploader :avatar, AvatarUploader
-  has_many :comments  
+  has_many :comments #先加上comment的外鍵
+  has_many :restaurants, through: :comments 
 
   def admin?
     self.role == "admin"
