@@ -5,7 +5,7 @@
       <h4><%= @restaurant.category.name %></h4>
     </div>
     <div class="col-md-4">
-      <%= image_tag @restaurant.image, class: "img-reponsive center-block" %>
+      <%= image_tag @restaurant.image, size: "400", class: "img-reponsive center-block" %>
       <div class="well"> 
         <ul class="list-unstyled">
           <li><strong>Opening Hour: </strong> <%= @restaurant.opening_hours %></li>
@@ -16,7 +16,10 @@
     </div>
     <div class="col-md-8">
       Decription:<%= @restaurant.decription %>
+    <hr>     
+<%= link_to 'Dashboard', dashboard_restaurant_path(@restaurant), class: "btn btn-primary" %>
     </div>
+
   </div>
 </div>
 <br>
