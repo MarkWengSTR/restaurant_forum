@@ -22,6 +22,8 @@
       <%= render partial: "shared/favorite", locals: {restaurant: @restaurant } %>
       <%= render partial: "shared/like", locals:{restaurant: @restaurant}%>
 
+      <h3>收藏數：<%= @restaurant.favorite_count %></h3> 
+
     </div>
   </div>
 </div>
