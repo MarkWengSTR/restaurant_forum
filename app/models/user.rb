@@ -16,9 +16,13 @@ class User < ApplicationRecord
 
   has_many :likes, dependent: :destroy
   has_many :liked_restaurants, through: :likes, source: :restaurant
-
+  #使用者追蹤使用者的多對多關係
   has_many :followships, dependent: :destroy
   has_many :followings, through: :followships
+  #使用者想知道誰追蹤他的多對多關係
+  has_many :inverse_followships, class_name: "Followship", foreign_key: "following_id"
+  has_many :followers, through: :inverse_followships, source: :user
+
 
   def admin?
     self.role == "admin"
