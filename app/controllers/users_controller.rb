@@ -9,11 +9,14 @@ def edit
   end
 end
 def update
-
   @user.update(user_params)
   redirect_to user_path(current_user)
-
 end
+
+def index
+  @users = User.all
+end
+
 
 private
 
