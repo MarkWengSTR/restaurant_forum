@@ -9,4 +9,10 @@ class FollowshipsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
+  def destroy
+    followship = Followship.where( user_id: current_user, following_id: params[:id]).first
+    followship.destroy
+    flash[:alert] = "你討厭他喔"
+    redirect_back(fallback_location: root_path)
+  end
 end
