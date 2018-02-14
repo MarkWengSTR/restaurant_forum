@@ -12,4 +12,5 @@ namespace :dev do
       puts "假資料已建立完成"
       puts "總共有 #{Comment.count}筆評論資料"
   end
+
 end
