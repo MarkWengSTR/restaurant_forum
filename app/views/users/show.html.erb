@@ -50,7 +50,7 @@
         <li class="list-group-item">
           <%= link_to user_path(follower) do %>
             <%= image_tag(follower.avatar, height: 30, width: 30, class: "img-circle") %>
-            <%= following.name %>
+            <%= follower.name %>
           <% end %>
         </li>
       <% end %>
