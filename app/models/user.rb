@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates_presence_of :name
+  #validates_presence_of :name
   mount_uploader :avatar, AvatarUploader
   # 使用者評論很多餐廳 的多對多關聯
   has_many :comments, dependent: :restrict_with_error

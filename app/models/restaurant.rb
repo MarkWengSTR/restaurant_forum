@@ -18,6 +18,7 @@ class Restaurant < ApplicationRecord
   end
   def favorite_number_count
     self.favorite_count = self.favorited_users.count
+    self.save
   end
 
 end
