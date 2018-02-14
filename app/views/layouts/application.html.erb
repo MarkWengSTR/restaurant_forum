@@ -35,7 +35,7 @@
             <li><%= link_to 'Admin Switch', admin_restaurants_path %></li>
             
           <% end %> 
-          <li><p class="navbar-text">Hi, <%= current_user.email %> </li>
+          <li><p class="navbar-text">Hi, <%= current_user.name %> </li>
           <li><%= link_to 'Profile ', user_path(current_user),class: "glyphicon glyphicon-user"  %></li>
           <li><%= link_to '登出 ', destroy_user_session_path, method: :delete ,class: "glyphicon glyphicon-log-out nav-glyphicon" %></li>
           <li><%= link_to '修改密碼', edit_user_registration_path ,class: "glyphicon glyphicon-pencil" %></li>
